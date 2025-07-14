@@ -276,7 +276,7 @@ export default class RichTextEditor extends Component {
           domStorageEnabled={false}
           bounces={false}
           javaScriptEnabled={true}
-          source={{uri: viewHTML}}
+          source={{html: viewHTML}}
           onLoad={that.init}
           onShouldStartLoadWithRequest={event => {
             if (event.url !== 'about:blank') {

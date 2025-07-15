@@ -263,29 +263,29 @@ export default class RichTextEditor extends Component {
       <>
         <WebView
           // useWebKit={true}
-          scrollEnabled={false}
-          hideKeyboardAccessoryView={true}
-          keyboardDisplayRequiresUserAction={false}
-          nestedScrollEnabled={!useContainer}
-          style={[styles.webview, style]}
-          {...rest}
-          ref={that.setRef}
-          onMessage={that.onMessage}
-          originWhitelist={['*']}
-          dataDetectorTypes={['none']}
-          domStorageEnabled={false}
-          bounces={false}
-          javaScriptEnabled={true}
-          source={{html: '<p>Hello</>'}}
-          onLoad={that.init}
-          onShouldStartLoadWithRequest={event => {
-            if (event.url !== 'about:blank') {
-              this.webviewBridge?.stopLoading();
-              Linking?.openURL(event.url);
-              return false;
-            }
-            return true;
-          }}
+          // scrollEnabled={false}
+          // hideKeyboardAccessoryView={true}
+          // keyboardDisplayRequiresUserAction={false}
+          // nestedScrollEnabled={!useContainer}
+          // style={[styles.webview, style]}
+          // {...rest}
+          // ref={that.setRef}
+          // onMessage={that.onMessage}
+          // originWhitelist={['*']}
+          // dataDetectorTypes={['none']}
+          // domStorageEnabled={false}
+          // bounces={false}
+          // javaScriptEnabled={true}
+          source={{html: '<p>Hello</p>'}}
+          // onLoad={that.init}
+          // onShouldStartLoadWithRequest={event => {
+          //   if (event.url !== 'about:blank') {
+          //     this.webviewBridge?.stopLoading();
+          //     Linking?.openURL(event.url);
+          //     return false;
+          //   }
+          //   return true;
+          // }}
         />
         {Platform.OS === 'android' && <TextInput ref={ref => (that._input = ref)} style={styles._input} />}
       </>

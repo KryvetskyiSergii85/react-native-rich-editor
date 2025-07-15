@@ -204,7 +204,7 @@ export default class RichTextEditor extends Component {
           let offsetY = Number.parseInt(Number.parseInt(data) + that.layout.y || 0);
           offsetY > 0 && onCursorPosition(offsetY);
           break;
-        case 'editor-ready':
+        case 'EDITOR_READY':
           that.init();
           break;
         default:

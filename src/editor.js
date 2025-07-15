@@ -743,7 +743,10 @@ function createHTML(options = {}) {
         isRN: !!window.ReactNativeWebView ,
         document: document
     });
-    window.ReactNativeWebView && window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'editor-ready' }));
+   document.addEventListener("DOMContentLoaded", function() {
+    // Editor init logic
+    window.ReactNativeWebView.postMessage(JSON.stringify({ type: 'EDITOR_READY' }));
+  });
 </script>
 </body>
 </html>
